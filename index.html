@@ -7,7 +7,16 @@
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-  <link href="index.css" rel="stylesheet" />
+	<link href="index.css" rel="stylesheet" />
+	<link
+		async
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/semantic-ui@2.0.0/dist/semantic.min.css"
+	/>
+	<script
+		async
+		src="https://cdn.jsdelivr.net/npm/semantic-ui@2.0.0/dist/semantic.min.js"
+	></script>
 </head>
 <body>
 	<div id="root"></div>
@@ -132,7 +141,7 @@
 				const row = Math.floor(step.chosenIndex/3) + 1;
 				const col = step.chosenIndex%3 + 1;
 				let buttonJ = 
-				<button onClick={()=>this.jumpTo(move)}>
+				<button className="ui.active.button" onClick={()=>this.jumpTo(move)}>
 						{step===current ? 
 						<strong>
 								{move ? 
